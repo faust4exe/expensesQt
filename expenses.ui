@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>eXpensesClass</class>
+ <widget class="QMainWindow" name="eXpensesClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>240</width>
+    <height>285</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>16</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>eXpenses</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="m_lDate">
+        <property name="text">
+         <string>Today Date :</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDateEdit" name="m_deDate">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="3,1,1">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="m_lCategory">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Category :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="m_cbCategory">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QToolButton" name="m_tbNewCategory">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="expenses.qrc">
+          <normaloff>:/eXpenses/Resources/add.png</normaloff>:/eXpenses/Resources/add.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="m_tbDeleteCategory">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="expenses.qrc">
+          <normaloff>:/eXpenses/Resources/remove.png</normaloff>:/eXpenses/Resources/remove.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="3,1,1">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="m_lProductl">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Product :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="m_cbProduct">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QToolButton" name="m_tbNewProduct">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="expenses.qrc">
+          <normaloff>:/eXpenses/Resources/add.png</normaloff>:/eXpenses/Resources/add.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="m_tbDeleteProduct">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="expenses.qrc">
+          <normaloff>:/eXpenses/Resources/remove.png</normaloff>:/eXpenses/Resources/remove.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="2,1">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="m_lCantitaty">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Cantitaty :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="f4QDoubleSpinBoxTouchable" name="m_dsbCantitaty">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>999999.989999999990687</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_pbAddProduct">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,1,2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="m_lPrice">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Price per Unit :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="f4QDoubleSpinBoxTouchable" name="m_dsbPrice">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximum">
+           <double>999999.989999999990687</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QToolButton" name="m_tbNewPrice">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="expenses.qrc">
+          <normaloff>:/eXpenses/Resources/add.png</normaloff>:/eXpenses/Resources/add.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Total Price:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="f4QDoubleSpinBoxTouchable" name="m_dsbTotalPrice">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximum">
+           <double>999999.989999999990687</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>1</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="m_pbSummary">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Summary</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_pbPrices">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Prices</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Exit</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menuNew">
+     <property name="title">
+      <string>New</string>
+     </property>
+     <addaction name="actionNew_Category"/>
+     <addaction name="actionNew_Product"/>
+     <addaction name="actionNew_Price"/>
+    </widget>
+    <addaction name="actionExit"/>
+    <addaction name="menuNew"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionEdit_Category"/>
+    <addaction name="actionEdit_Product"/>
+    <addaction name="actionEdit_Price"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionView_Summary"/>
+    <addaction name="actionView_Categories"/>
+    <addaction name="actionView_Products"/>
+    <addaction name="actionView_Price_Evolution"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="actionEdit_Category">
+   <property name="text">
+    <string>Edit Category</string>
+   </property>
+  </action>
+  <action name="actionEdit_Product">
+   <property name="text">
+    <string>Edit Product</string>
+   </property>
+  </action>
+  <action name="actionView_Summary">
+   <property name="text">
+    <string>View Summary</string>
+   </property>
+  </action>
+  <action name="actionView_Price_Evolution">
+   <property name="text">
+    <string>View Price Evolution</string>
+   </property>
+  </action>
+  <action name="actionNew_Category">
+   <property name="text">
+    <string>New Category</string>
+   </property>
+  </action>
+  <action name="actionNew_Product">
+   <property name="text">
+    <string>New Product</string>
+   </property>
+  </action>
+  <action name="actionNew_Price">
+   <property name="text">
+    <string>New Price</string>
+   </property>
+  </action>
+  <action name="actionEdit_Price">
+   <property name="text">
+    <string>Edit Price</string>
+   </property>
+  </action>
+  <action name="actionView_Categories">
+   <property name="text">
+    <string>View Categories</string>
+   </property>
+  </action>
+  <action name="actionView_Products">
+   <property name="text">
+    <string>View Products</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>f4QDoubleSpinBoxTouchable</class>
+   <extends>QDoubleSpinBox</extends>
+   <header>f4qdoublespinboxtouchable.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="expenses.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_cbCategory</sender>
+   <signal>activated(QString)</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>onCategorySelected(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>122</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_cbProduct</sender>
+   <signal>activated(QString)</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>onProductSelected(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>102</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_dsbCantitaty</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>onCantitatyChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>97</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_tbNewCategory</sender>
+   <signal>clicked()</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>newCategory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>84</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_tbNewProduct</sender>
+   <signal>clicked()</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>newProduct()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pbAddProduct</sender>
+   <signal>clicked()</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>onAddProductClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>740</x>
+     <y>303</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>236</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>759</x>
+     <y>439</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>240</x>
+     <y>267</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pbPrices</sender>
+   <signal>clicked()</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>showPrices()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>389</x>
+     <y>439</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pbSummary</sender>
+   <signal>clicked()</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>showSummary()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>439</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_tbNewPrice</sender>
+   <signal>clicked()</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>newPrice()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>433</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>110</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_tbDeleteCategory</sender>
+   <signal>clicked()</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>deleteCategory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>789</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>198</x>
+     <y>45</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_tbDeleteProduct</sender>
+   <signal>clicked()</signal>
+   <receiver>eXpensesClass</receiver>
+   <slot>deleteProduct()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>789</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>145</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onCategorySelected(QString)</slot>
+  <slot>onProductSelected(QString)</slot>
+  <slot>onCantitatyChanged(double)</slot>
+  <slot>newCategory()</slot>
+  <slot>newProduct()</slot>
+  <slot>onAddProductClicked()</slot>
+  <slot>showPrices()</slot>
+  <slot>showSummary()</slot>
+  <slot>newPrice()</slot>
+  <slot>deleteCategory()</slot>
+  <slot>deleteProduct()</slot>
+ </slots>
+</ui>
