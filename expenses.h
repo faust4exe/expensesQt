@@ -1,8 +1,9 @@
 #ifndef EXPENSES_H
 #define EXPENSES_H
 
-#include <QtGui/QMainWindow>
+#include <QMainWindow>
 #include <QMessageBox>
+
 #include "Item.h"
 #include "addcategory.h"
 #include "addproduct.h"
@@ -10,6 +11,7 @@
 #include "manager.h"
 #include "summary.h"
 #include "priceshistory.h"
+
 #include "ui_expenses.h"
 
 class eXpenses : public QMainWindow
@@ -17,7 +19,8 @@ class eXpenses : public QMainWindow
 	Q_OBJECT
 
 public:
-	eXpenses(QWidget *parent = 0, Qt::WFlags flags = 0);
+    eXpenses(QWidget *parent = 0);
+
 	~eXpenses();
 
 public Q_SLOTS:

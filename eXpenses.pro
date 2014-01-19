@@ -3,9 +3,14 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = 
+TARGET = eXpenses
 DEPENDPATH += . GeneratedFiles
 INCLUDEPATH += .
+
+greaterThan(QT_MAJOR_VERSION, 4) {
+  QT += widgets
+  DEFINES += USING_QT5
+}
 
 # Input
 HEADERS += addcategory.h \

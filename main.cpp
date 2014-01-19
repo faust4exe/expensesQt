@@ -1,5 +1,6 @@
 #include "expenses.h"
-#include <QtGui/QApplication>
+
+#include <QApplication>
 #include <QMainWindow>
 
 int main(int argc, char *argv[])
@@ -7,9 +8,13 @@ int main(int argc, char *argv[])
 	QApplication a(argc, argv);
 	eXpenses w;
 
-        w.setAttribute(Qt::WA_AutoOrientation, true);
+#ifdef USING_QT5
+    // TODO : set screen orientation
+#else
+    w.setAttribute(Qt::WA_AutoOrientation, true);
+#endif
 
-        w.show();//Maximized();
+    w.show();//Maximized();
 
 	return a.exec();
 }

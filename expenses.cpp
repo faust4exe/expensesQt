@@ -1,7 +1,7 @@
 #include "expenses.h"
 
-eXpenses::eXpenses(QWidget *parent, Qt::WFlags flags)
-	: QMainWindow(parent, flags)
+eXpenses::eXpenses(QWidget *parent)
+    : QMainWindow(parent)
 {
 	ui.setupUi(this);
 
