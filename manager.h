@@ -75,8 +75,6 @@ private:
 	
 };
 
-static Manager *m_manager = 0;
-
 #define qManager Manager::manager()
 
 #endif // MANAGER_H

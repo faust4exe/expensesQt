@@ -1,5 +1,15 @@
 #include "expenses.h"
 
+#include <QMessageBox>
+
+#include "Item.h"
+#include "addcategory.h"
+#include "addproduct.h"
+#include "addprice.h"
+#include "manager.h"
+#include "summary.h"
+#include "priceshistory.h"
+
 eXpenses::eXpenses(QWidget *parent)
     : QMainWindow(parent)
 {

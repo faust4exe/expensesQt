@@ -1,5 +1,13 @@
 #include "addprice.h"
 
+#include <QDate>
+#include <QMessageBox>
+
+#include "Item.h"
+#include "addcategory.h"
+#include "addproduct.h"
+#include "manager.h"
+
 AddPrice::AddPrice(QWidget *parent)
 	: QDialog(parent)
 {
@@ -51,7 +59,6 @@ void AddPrice::onProductChanged(QString product)
 
 	// need to get last price for product
 	const double price = qManager->priceOfProduct(productId);
-	double cantity = 1;
 
 	// set price for product
 	ui.m_dsbOldPrice->setValue(price); 

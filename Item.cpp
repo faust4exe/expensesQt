@@ -31,8 +31,6 @@ const QString Item::saveData() const
 	QStringList params;
 
 	foreach(QString paramName, parameters){
-		const int index = paramIndex(paramName);
-
 		const QString paramValue = data(paramName);
 
 		params << paramValue;

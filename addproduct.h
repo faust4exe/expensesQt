@@ -2,8 +2,7 @@
 #define ADDPRODUCT_H
 
 #include <QDialog>
-#include "addcategory.h"
-#include "Item.h"
+
 #include "ui_addproduct.h"
 
 class AddProduct : public QDialog

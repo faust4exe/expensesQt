@@ -1,5 +1,7 @@
 #include "manager.h"
 
+static Manager *m_manager;
+
 Manager::Manager(QObject *parent)
 	: QObject(parent)
 {
@@ -416,6 +418,8 @@ void Manager::addProduct(QString newProdName, QString categ, double price)
 
 void Manager::addPrice(QString prodName, QString categ, double price, QDate date)
 {
+    Q_UNUSED(categ)
+
 	const int prodId = productId(prodName);
 	m_prices->newPrice(prodId, price, date);
 
@@ -424,6 +428,8 @@ void Manager::addPrice(QString prodName, QString categ, double price, QDate date
 
 void Manager::addPurchase(QString prodName, double price, double cantitaty, QDate date)
 {
+    Q_UNUSED(price)
+
 	const int prodId = productId(prodName);
 	m_purchases->newPurchase(prodId, cantitaty, date);
 

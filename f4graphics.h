@@ -2,14 +2,9 @@
 #define F4GRAPHICS_H
 
 #include <QWidget>
-#include <QPainter>
-#include <QMap>
-#include <QScrollArea>
 #include <QDate>
+#include <QMap>
 #include <QPoint>
-#include <QScrollBar>
-#include <QSlider>
-#include <QResizeEvent>
 
 class f4Graphics : public QWidget
 {

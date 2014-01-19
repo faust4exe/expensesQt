@@ -63,5 +63,5 @@ QString Items::getItemData(const int i)
 
 void Items::deleteItem(Item *item)
 {
-	m_items;
+    m_items.removeAll(item);
 }

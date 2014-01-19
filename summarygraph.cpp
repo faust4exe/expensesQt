@@ -1,5 +1,8 @@
 #include "summarygraph.h"
+
 #include <QDebug>
+
+#include "manager.h"
 
 SummaryGraph::SummaryGraph(QWidget *parent)
 	: QDialog(parent)

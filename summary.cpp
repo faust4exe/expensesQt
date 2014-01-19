@@ -1,5 +1,10 @@
 #include "summary.h"
 
+#include <QTableWidgetItem>
+
+#include "manager.h"
+#include "summarygraph.h"
+
 Summary::Summary(QWidget *parent)
 	: QDialog(parent)
 {

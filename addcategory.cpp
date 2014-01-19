@@ -1,5 +1,9 @@
 #include "addcategory.h"
 
+#include <QMessageBox>
+
+#include "manager.h"
+
 AddCategory::AddCategory(QWidget *parent)
 	: QDialog(parent)
 {

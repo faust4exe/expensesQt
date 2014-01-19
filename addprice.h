@@ -2,11 +2,7 @@
 #define ADDPRICE_H
 
 #include <QDialog>
-#include <QDate>
-#include <QMessageBox>
-#include "Item.h"
-#include "addcategory.h"
-#include "addproduct.h"
+
 #include "ui_addprice.h"
 
 class AddPrice : public QDialog

@@ -2,9 +2,8 @@
 #define SUMMARY_H
 
 #include <QDialog>
-#include <QTableWidgetItem>
-#include "manager.h"
-#include "summarygraph.h"
+#include <QDate>
+
 #include "ui_summary.h"
 
 class Summary : public QDialog

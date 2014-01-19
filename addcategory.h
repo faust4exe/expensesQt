@@ -1,10 +1,7 @@
 #ifndef ADDCATEGORY_H
 #define ADDCATEGORY_H
 
-#include "manager.h"
-
 #include <QDialog>
-#include <QMessageBox>
 
 #include "ui_addcategory.h"
 

@@ -1,5 +1,11 @@
 #include "addproduct.h"
 
+#include <QMessageBox>
+
+#include "addcategory.h"
+#include "Item.h"
+#include "manager.h"
+
 AddProduct::AddProduct(QWidget *parent)
 	: QDialog(parent)
 {

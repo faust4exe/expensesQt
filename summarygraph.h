@@ -2,9 +2,7 @@
 #define SUMMARYGRAPH_H
 
 #include <QDialog>
-#include <QDate>
-#include <QMap>
-#include "manager.h"
+
 #include "ui_summarygraph.h"
 
 class SummaryGraph : public QDialog

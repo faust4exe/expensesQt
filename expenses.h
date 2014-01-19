@@ -2,15 +2,6 @@
 #define EXPENSES_H
 
 #include <QMainWindow>
-#include <QMessageBox>
-
-#include "Item.h"
-#include "addcategory.h"
-#include "addproduct.h"
-#include "addprice.h"
-#include "manager.h"
-#include "summary.h"
-#include "priceshistory.h"
 
 #include "ui_expenses.h"
 

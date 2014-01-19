@@ -10,19 +10,18 @@ static QString st_dateFormat = "dd.MM.yyyy";
 class Item
 {
 public:
-	Item(void);
+    Item(void);
+    virtual ~Item();
 
-	virtual bool loadData(const QString&);
-	virtual const QString saveData() const;
+    virtual bool loadData(const QString&);
+    virtual const QString saveData() const;
 
-	virtual const QString data(const QString&) const = 0;
-	virtual bool setData(const QString&, const QString&) = 0;
-public:
-	~Item(void);
-
-protected:
-	int paramIndex(const QString&) const;
+    virtual const QString data(const QString&) const = 0;
+    virtual bool setData(const QString&, const QString&) = 0;
 
 protected:
-	QStringList parameters;
+    int paramIndex(const QString&) const;
+
+protected:
+    QStringList parameters;
 };

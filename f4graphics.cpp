@@ -1,5 +1,11 @@
 #include "f4graphics.h"
 
+#include <QPainter>
+#include <QScrollArea>
+#include <QScrollBar>
+#include <QSlider>
+#include <QResizeEvent>
+
 f4Graphics::f4Graphics(QWidget *parent)
 	: QWidget(parent)
 {
@@ -48,6 +54,8 @@ void f4Graphics::resizeEvent(QResizeEvent *ev)
 	int newHg = size().height() - m_frame * 2;
 	m_valPerPixel = m_valPerPixel  * m_height / newHg;
 	m_height = newHg;
+
+    QWidget::resizeEvent(ev);
 }
 
 void f4Graphics::mouseMoveEvent(QMouseEvent *ev)
@@ -60,8 +68,8 @@ void f4Graphics::mouseMoveEvent(QMouseEvent *ev)
 	if (scroll) {
 		QPoint pos = ev->pos();
 		int diff = m_pos.x() - pos.x();
-		int sliderPos = scroll->horizontalScrollBar()->value();
-		QScrollBar *bar = scroll->horizontalScrollBar();
+
+        QScrollBar *bar = scroll->horizontalScrollBar();
 		bar->setValue(m_sliderPos + diff);
 	}
 }
@@ -114,10 +122,6 @@ void f4Graphics::paintEvent(QPaintEvent* ev)
 	p.fillRect(rect(), QBrush(Qt::white));
 
 	p.setPen(Qt::black);
-
-	//p.drawRect(12,12,100,100);
-
-	int val = 50;
 
 	QList<QDate> keys = m_values.keys();
 	qSort(keys);
@@ -195,5 +199,7 @@ void f4Graphics::paintEvent(QPaintEvent* ev)
 
 	if (keys.isEmpty())
 		p.drawText(rect().center(), "Please Choose Options");
+
+    QWidget::paintEvent(ev);
 
 }
